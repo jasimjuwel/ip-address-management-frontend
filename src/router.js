@@ -21,7 +21,7 @@ export default new Router({
             path: '/ip-list',
             name: 'ip-list',
             // lazy-loaded
-            component: () => import('./components/IpList.vue'),
+            component: () => import('./components/IpAdress/IpList.vue'),
             meta: {
                 auth: true
             },
@@ -30,7 +30,7 @@ export default new Router({
             path: '/ip-create',
             name: 'ip-create',
             // lazy-loaded
-            component: () => import('./components/IpCreate.vue'),
+            component: () => import('./components/IpAdress/IpCreate.vue'),
             meta: {
                 auth: true
             },
@@ -39,7 +39,16 @@ export default new Router({
             path: '/ip-edit/:id',
             name: 'ip-edit',
             // lazy-loaded
-            component: () => import('./components/IpEdit.vue'),
+            component: () => import('./components/IpAdress/IpEdit.vue'),
+            meta: {
+                auth: true
+            },
+        },
+        {
+            path: '/audit-list',
+            name: 'audit-list',
+            // lazy-loaded
+            component: () => import('./components/AuditLog/AuditLog.vue'),
             meta: {
                 auth: true
             },

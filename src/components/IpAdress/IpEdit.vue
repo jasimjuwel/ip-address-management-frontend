@@ -13,7 +13,7 @@
                 <div class="form-group row">
                   <label for="ip_address" class="col-md-4 col-form-label text-md-right">IP Address</label>
                   <div class="col-md-6">
-                    <input type="text" id="ip_address" class="form-control" v-model="form.ip_address">
+                    <input type="text" id="ip_address" class="form-control" v-model="form.ip_address" readonly>
                     <div class="requiredField" v-if="(errors.ip_address)">
                       <span class="text-danger">{{ (errors.ip_address) ? errors.ip_address[0] : '' }}</span>
                     </div>

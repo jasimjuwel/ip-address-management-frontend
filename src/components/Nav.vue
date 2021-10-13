@@ -1,27 +1,29 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
     <div class="container">
-      <router-link class="navbar-brand" to="/">IP Management System</router-link>
+      <router-link class="navbar-brand text-danger" to="/">IP Management System</router-link>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <ul class="navbar-nav ml-auto" v-if="user">
+        <li class="nav-item">
+          <router-link class="nav-link text-primary" to="/ip-list">IP List</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link text-primary" to="/audit-list">Audit List</router-link>
+        </li>
+      </ul>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto" v-if="!user">
           <li class="nav-item">
-            <router-link class="nav-link" to="/login">Login</router-link>
+            <router-link class="nav-link text-primary" to="/login">Login</router-link>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto" v-if="user">
           <li class="nav-item">
-            <router-link class="nav-link" to="/ip-list">IP List</router-link>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="javascript:void(0)">Hi {{ user.name }}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="javascript:void(0)" @click="handleClick">Logout</a>
+            <a class="nav-link text-primary" href="javascript:void(0)" @click="handleClick">Logout</a>
           </li>
         </ul>
       </div>

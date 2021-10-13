@@ -77,7 +77,6 @@
             if (localStorage.getItem('token') != null) {
                 const response = await axios.get('ip-list');
                 this.ipList = response.data.data;
-                console.log(response)
             }
         },
 
