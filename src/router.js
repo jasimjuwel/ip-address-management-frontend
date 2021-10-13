@@ -35,6 +35,15 @@ export default new Router({
                 auth: true
             },
         },
+        {
+            path: '/ip-edit/:id',
+            name: 'ip-edit',
+            // lazy-loaded
+            component: () => import('./components/IpEdit.vue'),
+            meta: {
+                auth: true
+            },
+        },
     ]
 });
 

@@ -19,7 +19,8 @@
           <div class="card">
             <div class="card-header">Dashboard</div>
             <div class="card-body">
-              <h3 v-if="user">Hi {{ user.name }}</h3>
+              <h3 v-if="user">Hi <span class="text-success">{{ user.name }}</span></h3>
+              <h2 v-if="user">Welcome to IP Management System</h2>
             </div>
           </div>
         </div>
