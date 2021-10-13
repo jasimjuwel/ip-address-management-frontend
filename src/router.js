@@ -17,6 +17,24 @@ export default new Router({
             path: '/login',
             component: Login
         },
+        {
+            path: '/ip-list',
+            name: 'ip-list',
+            // lazy-loaded
+            component: () => import('./components/IpList.vue'),
+            meta: {
+                auth: true
+            },
+        },
+        {
+            path: '/ip-create',
+            name: 'ip-create',
+            // lazy-loaded
+            component: () => import('./components/IpCreate.vue'),
+            meta: {
+                auth: true
+            },
+        },
     ]
 });
 
